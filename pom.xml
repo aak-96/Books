@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Books</groupId>
+  <artifactId>Books</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+   <!-- Parent Spring Boot version -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.3.4</version> <!-- Use the latest compatible version -->
+        <relativePath/> <!-- Lookup parent from the repository -->
+    </parent>
+
+    <dependencies>
+  
+   <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+
+    <!-- MySQL Connector (JDBC Driver) -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.30</version> <!-- Ensure this matches your MySQL version -->
+    </dependency>
+
+    <!-- Hibernate Core (for JPA provider) -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.6.10.Final</version> <!-- Ensure this matches with Spring Boot version -->
+    </dependency>
+
+    <!-- Spring Boot Starter Web (for REST API and web support) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+ 	
+ </dependencies>
+ 
+ <build>
+    <plugins>
+        <!-- For proper packaging of Spring Boot app -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+    
+</project>
